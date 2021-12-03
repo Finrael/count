@@ -43,7 +43,18 @@ const map={
                 }
                 return null;
               })
-            return filteredResult;
+              const mappedResult =[];
+              for(const element of filteredResult){
+                  let auxArr=[]
+                  for(const internalElement of element){
+                   
+                   if(map[internalElement]!==undefined){
+                       auxArr.push(map[internalElement])
+                   }  
+                  }
+                  mappedResult.push(auxArr)
+             }
+       return mappedResult
         };
     
     
